@@ -88,7 +88,7 @@ select {
 body {
   color: var(--Soft-blue);
   background-color: var(--Very-dark-blue);
-  padding: 20px 30px;
+  padding: 10px 15px;
   font-size: 1.125rem;
 }
 h2 {
@@ -96,6 +96,7 @@ h2 {
 } 
 .price kbd {
   color: var(--Cyan);
+  font-weight: 600;
 }
 .card {
   display: flex; 
@@ -103,9 +104,12 @@ h2 {
   margin-left: auto;
   margin-right: auto;
   border-radius: 10px;
-  padding: 10px;
-  max-width: 19rem;
+  padding: 20px;
+  max-width: 22rem;
   background-color: var(--Very-dark-blue-cbg);
+}
+.card p {
+  font-weight: 300;
 }
 .card img {
   border-radius: 10px;
@@ -118,11 +122,11 @@ h2 {
   flex-direction: row;
   justify-content: space-between;
 }
-  /*
+  
 .price-info img {
   max-width: fit-content;
 }
-  */
+  
 .price-info {
   display: flex;
   flex-direction: row;
@@ -134,9 +138,18 @@ h2 {
 }
 .credit span {
   color: var(--White);
+  font-weight: 400;
 }
 .credit img {
    width: 34px;
    border-radius: 50px;
    border: 2px solid var(--White);
+} 
+@media screen and (min-width: 37.5rem) {
+  body {
+    padding: 20px 30px;
+  }
+  .card {
+    max-width: 19rem;
+  }
 }
