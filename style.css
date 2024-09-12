@@ -93,10 +93,17 @@ body {
 }
 h2 {
   color: var(--White);
+  font-weight: 600;
 } 
+h2:hover {
+  color: var(--Cyan);
+}
 .price kbd {
   color: var(--Cyan);
   font-weight: 600;
+}
+.price span {
+  font-weight: 300;
 }
 .card {
   display: flex; 
@@ -115,7 +122,7 @@ h2 {
   border-radius: 10px;
 }
 .card img:hover {
-  background-image: url('icon-view.svg'); 
+  color: var(--Cyan);
 }
 .price {
   display: flex; 
@@ -134,11 +141,16 @@ h2 {
 .credit {
   display: flex;
   flex-direction: row;
+  padding: 10px;
+  gap: 5px;
   border-top: 2px solid var(--Very-dark-blue-l);
 }
 .credit span {
   color: var(--White);
   font-weight: 400;
+}
+.credit span:hover {
+  color: var(--Cyan);
 }
 .credit img {
    width: 34px;
