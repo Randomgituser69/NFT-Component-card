@@ -157,6 +157,32 @@ h2:hover {
    border-radius: 50px;
    border: 2px solid var(--White);
 } 
+button {
+  position: relative;
+}
+button:before {
+  content: "";
+  position: absolute; 
+  background-color: var(--Cyan);
+  opacity: 0;
+  z-index: 5;
+}
+button:after {
+  content: ""; 
+  position: absolute;
+  background-image: url("icon-view.svg"); 
+  background-size: cover; 
+  background-repeat: no-repeat;
+  background-position: center;
+  opacity: 0;
+  z-index: 2;
+}
+button:before:hover {
+ opacity: 0.7;
+}
+button:after:hover {
+  opacity: 1;
+}
 @media screen and (min-width: 37.5rem) {
   body {
     padding: 20px 30px;
