@@ -91,6 +91,9 @@ body {
   padding: 10px 15px;
   font-size: 1.125rem;
 }
+a {
+  text-decoration: none;
+}
 h2 {
   color: var(--White);
   font-weight: 600;
@@ -98,7 +101,7 @@ h2 {
 h2:hover {
   color: var(--Cyan);
 }
-.price kbd {
+.price p {
   color: var(--Cyan);
   font-weight: 600;
 }
@@ -118,25 +121,22 @@ h2:hover {
 .card p {
   font-weight: 300;
 }
-.card img {
-  border-radius: 10px;
-}
-.card img:hover {
-  color: var(--Cyan);
-}
 .price {
   display: flex; 
   flex-direction: row;
   justify-content: space-between;
 }
   
-.price-info img {
-  max-width: fit-content;
-}
-  
 .price-info {
   display: flex;
   flex-direction: row;
+  gap: 5px;
+}
+#ETH {
+  size: 100%;
+}
+#clock {
+  size: 100%;
 }
 .credit {
   display: flex;
@@ -145,11 +145,11 @@ h2:hover {
   gap: 5px;
   border-top: 2px solid var(--Very-dark-blue-l);
 }
-.credit span {
+.credit a {
   color: var(--White);
   font-weight: 400;
 }
-.credit span:hover {
+.credit a:hover {
   color: var(--Cyan);
 }
 .credit img {
@@ -159,28 +159,36 @@ h2:hover {
 } 
 button {
   position: relative;
+  padding: 0;
+  margin: 0;
+  border: transparent;
+  border-radius: 10px;
+  overflow: hidden;
 }
 button:before {
+  display: block;
   content: "";
   position: absolute; 
   background-color: var(--Cyan);
   opacity: 0;
-  z-index: 5;
+  inset: 0;
+  z-index: 2;
 }
 button:after {
+  display: block;
   content: ""; 
-  position: absolute;
+  inset: 0;
   background-image: url("icon-view.svg"); 
   background-size: cover; 
   background-repeat: no-repeat;
   background-position: center;
   opacity: 0;
-  z-index: 2;
+  z-index: 3;
 }
-button:before:hover {
+button:hover:before {
  opacity: 0.7;
 }
-button:after:hover {
+button:hover:after {
   opacity: 1;
 }
 @media screen and (min-width: 37.5rem) {
