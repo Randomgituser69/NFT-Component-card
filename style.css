@@ -193,4 +193,10 @@ button:hover:before {
 }
 button:hover:after {
   opacity: 1;
+} 
+.attribute {
+  text-align: center;
+}
+.attribute a {
+  color: skyblue;
 }
